@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: dashvinsingh/dashvinsingh.github.io
+
+media_folder: /public/media
+public_folder: /media
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: /app/blog/posts
+    extension: mdx
+    slug: '{{publishedAt}}-{{title}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: publishedAt, widget: datetime, type: date }
+      - { label: Summary, name: summary, widget: string }
+      - { label: Published, name: published, widget: boolean }
+      - { label: Body, name: body, widget: richtext }
+    sortable_fields:
+      fields: [publishedAt, title]
+      default:
+        field: publishedAt
+        direction: 
+    summary: "{{published | ternary('', '`Draft`')}} **{{title}}** - _{{publishedAt}}_"
+    view_filters:
+      filters:
+      - name: drafts
+        label: Drafts
+        field: published
+        pattern: false
+      - name: isPublished
+        label: Published
+        field: published
+        pattern: true
+      - name: 2026
+        label: Posts from 2026
+        field: publishedAt
+        pattern: '^2026'
+      default: drafts
