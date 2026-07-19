@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <rss version="2.0">
+    <channel>
+        <title>My Portfolio</title>
+        <link>https://blog.dashvin.com</link>
+        <description>This is my portfolio RSS feed</description>
+        <item>
+          <title>Reshaping how I think</title>
+          <link>https://blog.dashvin.com/blog/2026-04-07-reshaping-how-i-think</link>
+          <description>A reflection on my thinking process and how AI is reshaping it.</description>
+          <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>Yoga</title>
+          <link>https://blog.dashvin.com/blog/2026-03-09-yoga</link>
+          <description>Pondering on the beautiful practice of Yoga.</description>
+          <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>Risk Management</title>
+          <link>https://blog.dashvin.com/blog/2026-02-09-risk-management</link>
+          <description>An attempt to define risk management and how it affects our day to day</description>
+          <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>The fundamentals of financial markets</title>
+          <link>https://blog.dashvin.com/blog/2026-01-21-financial-markets</link>
+          <description>A reflection on my investment journey and recent attempts to learn the fundamentals of investment and trading.</description>
+          <pubDate>Thu, 22 Jan 2026 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>Writing publicly</title>
+          <link>https://blog.dashvin.com/blog/2026-01-07-writing-publicly</link>
+          <description>A note to self on writing publicly</description>
+          <pubDate>Wed, 07 Jan 2026 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>My understanding of value</title>
+          <link>https://blog.dashvin.com/blog/understanding-value</link>
+          <description>A philosophical musing on value</description>
+          <pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>Welcome!</title>
+          <link>https://blog.dashvin.com/blog/HelloWorld</link>
+          <description>An introduction blog post</description>
+          <pubDate>Mon, 13 Jan 2025 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+  </rss>
