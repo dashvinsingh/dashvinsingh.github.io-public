@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kitty Asteroid Shooter 🎀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hud">
+        <div class="player-info pink-info">
+            <div class="player-name">Player 1</div>
+            <div class="stat">Score: <span id="score1">0</span></div>
+            <div class="stat">Ammo: <span id="ammo1">30</span></div>
+            <div class="stat lives-stat">Lives: <span id="lives1">❤️❤️❤️❤️❤️</span></div>
+            <div class="control-indicator" id="control1">Keyboard</div>
+            <div class="powerups-active" id="powerups1"></div>
+        </div>
+        <div class="title">🎀 Hello Kitty Asteroid Shooter 🎀</div>
+        <div class="player-info blue-info">
+            <div class="player-name">Player 2</div>
+            <div class="stat">Score: <span id="score2">0</span></div>
+            <div class="stat">Ammo: <span id="ammo2">30</span></div>
+            <div class="stat lives-stat">Lives: <span id="lives2">❤️❤️❤️❤️❤️</span></div>
+            <div class="control-indicator" id="control2">Keyboard</div>
+            <div class="powerups-active" id="powerups2"></div>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="startScreen" class="start-screen">
+        <div class="start-content">
+            <h1 class="game-title">🎀 Hello Kitty<br>Asteroid Shooter 🎀</h1>
+
+            <h2 style="color: #ff69b4; margin: 20px 0;">Select Game Mode</h2>
+
+            <div class="mode-selection">
+                <button type="button" class="mode-btn" id="singlePlayerBtn">
+                    <span class="mode-emoji">👤</span>
+                    <span class="mode-title">Single Player</span>
+                    <span class="mode-desc">Play solo with touch/keyboard controls</span>
+                </button>
+                <button type="button" class="mode-btn" id="multiPlayerBtn">
+                    <span class="mode-emoji">👥</span>
+                    <span class="mode-title">Two Players</span>
+                    <span class="mode-desc">Keyboard controls for 2 players</span>
+                </button>
+            </div>
+
+            <div id="controlInfo" class="control-info hidden">
+                <h3 style="color: #ff69b4; margin: 20px 0;">Controls</h3>
+                <div id="keyboardControls" class="control-selection">
+                    <div class="player-control-box pink-box">
+                        <h3>Player 1</h3>
+                        <p class="control-desc" style="margin-left: 0; font-size: 1.1em;">⌨️ WASD + SPACE</p>
+                    </div>
+                    <div class="player-control-box blue-box">
+                        <h3>Player 2</h3>
+                        <p class="control-desc" style="margin-left: 0; font-size: 1.1em;">⌨️ Arrows + ENTER</p>
+                    </div>
+                </div>
+                <div id="mobileControls" class="control-selection hidden">
+                    <p class="control-desc" style="margin-left: 0; font-size: 1.1em; text-align: center;">
+                        📱 Use on-screen joystick to move<br>
+                        Tap shoot button to fire
+                    </p>
+                </div>
+                <p class="tip">Collect golden stars for ammo!<br>Grab powerups for special abilities!<br>Press ESC to pause</p>
+                <button type="button" id="startGame" class="start-btn">START GAME</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile touch controls -->
+    <div id="mobileControls" class="mobile-controls hidden">
+        <div class="joystick-container" id="joystick">
+            <div class="joystick-base"></div>
+            <div class="joystick-stick" id="joystickStick"></div>
+        </div>
+        <button class="shoot-btn" id="shootBtn">🔫</button>
+    </div>
+
+    <div id="gameOver" class="game-over hidden">
+        <h2>Game Over! 💫</h2>
+        <p id="winner"></p>
+        <button onclick="location.reload()">Play Again</button>
+    </div>
+
+    <div id="victoryScreen" class="game-over hidden">
+        <h2>🎀 VICTORY! 🎀</h2>
+        <p style="font-size: 2em; margin: 20px 0;">You Defeated Evil Hello Kitty!</p>
+        <p id="victoryScores" style="font-size: 1.3em;"></p>
+        <button onclick="location.reload()">Play Again</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
